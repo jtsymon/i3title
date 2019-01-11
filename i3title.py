@@ -14,6 +14,9 @@ if args.truncate:
 
 def print_window_title(container):
     title = container.name
+    if not title:
+        print("")
+        return
     if args.truncate and len(title) > args.truncate:
         title = title[:truncate_to] + '...'
     print(title)
