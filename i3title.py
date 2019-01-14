@@ -28,4 +28,5 @@ i3 = i3ipc.Connection()
 print_window_title(i3.get_tree().find_focused())
 if args.subscribe:
     i3.on("window::focus", on_window_focus)
+    i3.on("window::title", on_window_focus)
     i3.main()
